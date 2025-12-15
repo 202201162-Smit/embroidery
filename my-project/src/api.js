@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const API = axios.create({
   // eslint-disable-next-line no-undef
-  baseURL: 'http://localhost:8080/api',
+  baseURL: 'https://embroidery-gamma.vercel.app',
 });
 
 export default API;
