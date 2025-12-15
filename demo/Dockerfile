@@ -1,16 +1,12 @@
-# Java 17
 FROM eclipse-temurin:17-jdk
 
 WORKDIR /app
 
-# Copy all files
 COPY . .
 
-# Give execute permission to mvnw
 RUN chmod +x mvnw
 
-# Build using Maven Wrapper
-RUN ./mvnw clean package -DskipTests
+RUN ./mvnw clean package -Dmaven.test.skip=true
 
 EXPOSE 8080
 
